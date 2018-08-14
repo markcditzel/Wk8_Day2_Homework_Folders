@@ -4,6 +4,8 @@ import models.Extension;
 import models.File;
 import models.Folder;
 
+import java.util.List;
+
 public class Runner {
 
     public static void main(String[] args) { // Universal method to allow it to function as a console
@@ -20,7 +22,12 @@ public class Runner {
         File file2 = new File("My_Singing",1000,folder2,Extension.MP3);
         DBHelper.save(file2);
 
-        DBFolder.getFilesInFolder(folder1);
+        file1.setName("My_Other_CV");
+        DBHelper.update(file1);
+
+       // DBHelper.delete(file3);
+
+        List<File> filesinfolder = DBFolder.getFilesInFolder(folder1);
 
 
 

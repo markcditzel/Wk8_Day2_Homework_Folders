@@ -53,7 +53,7 @@ public class File {
     }
 
     @ManyToOne // a folder can have many files, but a file can have only one folder
-    @JoinColumn(name = "folder_id", nullable = false) // a file does have to be in a folder
+    @JoinColumn(name = "folder_id", nullable = false) // why "folder_id"?? ; a file does have to be in a folder
     public Folder getFolder() {
         return folder;
     }
