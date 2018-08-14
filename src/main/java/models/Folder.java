@@ -40,7 +40,8 @@ public class Folder {
         this.name = name;
     }
 
-    public List<File> getFiles() {
+    @OneToMany(mappedBy = "folder", fetch = FetchType.LAZY)
+    List<File> getFiles() {
         return files;
     }
 
@@ -48,3 +49,4 @@ public class Folder {
         this.files = files;
     }
 }
+
