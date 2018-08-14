@@ -9,15 +9,14 @@ public class Folder {
 
     private int id;
     private String name;
-    private Extension extension;
     private List<File> files;
 
     public Folder(){
     }
 
-    public Folder(String name, Extension extension) {
+    public Folder(String name) {
         this.name = name;
-        this.extension = extension;
+        this.files = null;
     }
 
 
@@ -39,15 +38,6 @@ public class Folder {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    @Enumerated(value = EnumType.STRING)
-    Extension getExtension() {
-        return extension;
-    }
-
-    public void setExtension(Extension extension) {
-        this.extension = extension;
     }
 
     public List<File> getFiles() {
